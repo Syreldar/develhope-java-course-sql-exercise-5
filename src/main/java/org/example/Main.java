@@ -22,7 +22,7 @@ public class Main
         try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/newdb", "developer", "developer");
              Statement statement = connection.createStatement())
         {
-            try (ResultSet resultSet = statement.executeQuery("SELECT first_name, last_name, country FROM students"))
+            try (ResultSet resultSet = statement.executeQuery("SELECT first_name, last_name, country FROM students;"))
             {
                 while (resultSet.next())
                 {
